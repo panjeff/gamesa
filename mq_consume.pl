@@ -6,7 +6,7 @@ my $channel = 1001;
 my $queuename = "pyh_queue";
 my $mq = Net::RabbitMQ->new();
 
-$mq->connect("localhost", { vhost=>"/pyhtest", user => "pyh", password => "pyh1234" });
+$mq->connect("localhost", { vhost=>"/pyhtest", user => "pyh", password => "pyh3214" });
 $mq->channel_open($channel);
 
 while (1) {
