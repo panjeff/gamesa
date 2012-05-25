@@ -8,7 +8,7 @@ my $debug = 0;
 my @email = qw/yhpang@163.com/;
 my $test_rr = 'cloudcache.net';
 my $test_val = '50.31.252.20';  
-my @nameservers = qw/174.140.172.238 204.12.223.15 216.27.27.174 68.171.100.100 62.141.35.111/;
+my @nameservers = qw(174.140.172.238 62.141.35.111 78.110.173.207 68.171.100.100 204.12.223.15);
 
 for my $ns (@nameservers) {
     test_query($ns);
@@ -22,13 +22,16 @@ sub test_query {
     if (defined $answer) {
         my @rr = $answer->answer;
         if ($rr[0]->address ne $test_val) {
-           sendmail( "Cloud DNS wrong: $ns" );
+           sendmail( "DNS not matched: $ns" );
            print "$ns wrong\n";
         }
         if ($debug) {
            print "$ns expected value for $test_rr: $test_val\n";
            print "$ns got value for $test_rr: ", $rr[0]->address,"\n";
         }
+    } else {
+        sendmail( "Can't query to: $ns" );
+        print "$ns wrong\n";
     }
 }
 
