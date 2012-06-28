@@ -2,10 +2,10 @@
 require 'net/http'
 require 'uri'
     
-url = URI.parse('http://udb.xxx.com/message/loginforseq')
+url = URI.parse('http://udb.duowan.com/message/loginforseq')
 
 req = Net::HTTP::Post.new(url.path)
-req.set_form_data({'username'=>'pyhtest', 'password'=>'***'});
+req.set_form_data({'username'=>'pyhtest', 'password'=>'qwer1234'});
 
 res = Net::HTTP.new(url.host, url.port).start {|http| http.request(req) }
 

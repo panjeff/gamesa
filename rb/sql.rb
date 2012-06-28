@@ -2,7 +2,7 @@ require 'rubygems'
 require 'dbi'
 require 'iconv'
 
-dbh = DBI.connect('DBI:Mysql:svradm','root','***')
+dbh = DBI.connect('DBI:Mysql:svradm','root','123456789')
 sth = dbh.prepare("select * from servers")
 
 sth.execute

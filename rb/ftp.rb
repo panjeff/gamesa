@@ -1,7 +1,7 @@
 require 'net/ftp'
-host = '120.132.133.*'
+host = '120.132.133.34'
 user = 'administrator'
-pass = '***'
+pass = '21vianet'
 file = '100M.tgz'
 
 Net::FTP.open(host) do |ftp|
