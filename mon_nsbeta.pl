@@ -11,7 +11,7 @@ eval {
 } or die "MIME::Base64 and Authen::SASL are required\n"; 
 
 my @email = ('yhpang@163.com');
-my @nameservers = qw(174.140.172.238 62.141.35.111 78.110.173.207 68.171.100.100 204.12.223.15);
+my @nameservers = qw(209.141.54.207  78.110.173.207 68.171.100.100);
 
 my $hostname = hostname;  
 my $ua = LWP::UserAgent->new;  

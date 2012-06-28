@@ -7,8 +7,8 @@ use Email::Send::126;
 my $debug = 0;
 my @email = qw/yhpang@163.com/;
 my $test_rr = 'cloudcache.net';
-my $test_val = '50.31.252.20';  
-my @nameservers = qw(174.140.172.238 62.141.35.111 78.110.173.207 68.171.100.100 204.12.223.15);
+my $test_val = '199.91.172.11';  
+my @nameservers = qw(ns1.cloudwebdns.com ns2.cloudwebdns.com ns3.cloudwebdns.com ns4.cloudwebdns.com);
 
 for my $ns (@nameservers) {
     test_query($ns);
